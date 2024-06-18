@@ -1,3 +1,8 @@
+from colorama import Fore, Style, init
+
+# Inicializa colorama
+init()
+
 def quicksort(arr, low, high):
     if low < high:
         # Particionamos el array y obtenemos el índice del pivote
@@ -23,9 +28,15 @@ def partition(arr, low, high):
     arr[i + 1], arr[high] = arr[high], arr[i + 1]
     return i + 1
 
+def print_colored_list(arr, color):
+    colored_list = color + str(arr) + Style.RESET_ALL
+    print(colored_list)
+
 # Ejemplo de uso:
-arr = [10, 7, 8, 9, 1, 5]
+arr = [17, 20, 7, 11, 2, 4]
 n = len(arr)
 print("Lista original:", arr)
+print_colored_list(arr, Fore.GREEN)
 quicksort(arr, 0, n - 1)
 print("Lista ordenada:", arr)
+print_colored_list(arr, Fore.RED)
