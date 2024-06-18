@@ -35,8 +35,8 @@ def print_colored_list(arr, color):
 # Ejemplo de uso:
 arr = [17, 20, 7, 11, 2, 4]
 n = len(arr)
-print("Lista original:", arr)
+print("Lista original:")
 print_colored_list(arr, Fore.GREEN)
 quicksort(arr, 0, n - 1)
-print("Lista ordenada:", arr)
+print("Lista ordenada:")
 print_colored_list(arr, Fore.RED)
